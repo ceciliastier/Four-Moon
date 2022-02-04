@@ -1,0 +1,41 @@
+// Global Colors
+$off-white: #fafafa;
+$off-black: #272727;
+$accent: #af875e;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+}
+.site-wrapper{
+    overflow-x: hidden;
+    position: relative;
+}
+img{
+    max-width: 100%;
+}
+
+@import 'components/aminations';
+@import 'breakpoints';
+@import 'typography';
+@import 'wrapper';
+
+@import 'components/nav';
+@import 'components/lightbox';
+@import 'components/buttons';
+
+@import 'sections/header';
+@import 'sections/hero';
+@import 'sections/about';
+@import 'sections/gallery';
+@import 'sections/testimonials';
+@import 'sections/team';
+@import 'sections/locations';
+@import 'sections/contact';
+@import 'sections/footer';

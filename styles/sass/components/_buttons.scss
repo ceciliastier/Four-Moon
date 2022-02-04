@@ -1,0 +1,89 @@
+button,
+.btn1,
+.btn2,
+a {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.2s;
+    &.icon-btn {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    &.btn1 {
+        padding: 0.75rem 1.5rem;
+        background-color: transparent;
+        border: 2px solid $accent;
+        color: $off-white;
+        cursor: pointer;
+        display: inline-block;
+        &:hover {
+            background-color: transparentize($color: $off-white, $amount: 0.8);
+        }
+    }
+    &.btn2 {
+        padding: 0.75rem 1.5rem;
+        background-color: $off-white;
+        border: none;
+        color: $off-black;
+        cursor: pointer;
+        &:hover {
+            background-color: transparentize($color: $off-white, $amount: 0.3);
+        }
+    }
+}
+.gallery .lightbox-container button {
+    border: 1px solid $off-white;
+    // background-color: transparentize($color: $off-white, $amount: 0.5);
+    background-color: transparent;
+    border-radius: 100%;
+    position: absolute;
+    z-index: 10;
+    margin: 10px;
+
+    &.prev {
+        left: 0;
+    }
+    &.next {
+        right: 0;
+    }
+    &.close-lightbox {
+        top: 0;
+        right: 0;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i {
+            padding: 0;
+        }
+    }
+    i {
+        padding: 7px 2px;
+        transition: 0.2s;
+        color: $off-white;
+        @include sm {
+            padding: 10px 5px;
+        }
+    }
+    &.inactive {
+        pointer-events: none;
+        border-color: gray;
+        i {
+            color: gray;
+        }
+    }
+    @include md {
+        &.next:hover {
+            i {
+                transform: translateX(3px);
+            }
+        }
+        &.prev:hover {
+            i {
+                transform: translateX(-3px);
+            }
+        }
+    }
+}

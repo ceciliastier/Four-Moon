@@ -1,0 +1,51 @@
+.testimonials{
+    background: url(/images/cta.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: $off-white;
+    i{
+        color: transparentize($color: $off-white, $amount: 0.5);
+        font-size: 0.8em;
+        &.fa-quote-left{
+            padding-right: 5px;
+        }
+        &.fa-quote-right{
+            padding-left: 5px;
+        }
+    }
+    figure{
+        display: grid;
+        grid-template-columns: 50px auto;
+        gap: 1rem;
+        border-bottom: 1px solid $off-white;
+        padding-bottom: 1.2rem;
+        margin-bottom: 1.2rem;
+        @include sm{
+            padding: 2rem 0;
+        }
+        @include md{
+            padding: 4rem 0;
+        }
+        &:last-of-type{
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+        blockquote{
+            grid-column: 1/3;
+            grid-row: 1;
+        }
+        img{
+            grid-column: 1/2;
+            grid-row: 2;
+        }
+        figcaption{
+            grid-column: 2/3;
+            grid-row: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+    }
+}

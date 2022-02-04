@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
+
+body,
+.btn1, .btn2,
+button {
+    font-family: "Spatan", Helvetica, sans-serif;
+    color: $off-black;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 2em;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 1.75em;
+    @include sm{
+        font-size: 2.2em;
+    }
+    @include md{
+        font-size: 2.5em;
+    }
+}
+h2 {
+    font-weight: 300;
+    font-size: 1.2em;
+    line-height: 1.75em;
+}
+
+h3 {
+    font-size: 1.25em;
+    line-height: 1.5em;
+    font-weight: 700;
+    margin: 0 0 1em 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    @include sm{
+        font-size: 1.5em;
+    }
+    @include md{
+        font-size: 1.75em;
+    }
+    &::after {
+        background-color: rgba(144, 144, 144, 0.25);
+        content: "";
+        display: block;
+        height: 2px;
+        width: 4em;
+        margin-top: 1rem;
+    }
+    &.center{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+h4{
+    line-height: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+h5{
+    font-weight: 300;
+    font-size: 1em;
+}
+p, blockquote {
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.65em;
+}
+figcaption{
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+cite{
+    font-style: normal;
+    // font-size: 0.9em;
+    font-weight: 300;
+    text-transform: none;
+    letter-spacing: normal;
+}
+li{
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.65em;
+}
+.lead{
+    font-size: 1.3em;
+}
+
+nav{
+    a{
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.7em;
+    }
+}
+a{
+    text-decoration: none;
+}
+.btn1, .btn2{
+    font-size: 0.8em;
+    letter-spacing: 1px;
+}
+.contact a{
+    text-transform: none;
+    letter-spacing: normal;
+}

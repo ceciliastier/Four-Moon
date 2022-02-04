@@ -1,0 +1,112 @@
+.contact{
+    background: linear-gradient(transparentize(#1b1b1b, 0.35), transparentize(#0f0f0f, 0)), url(/images/banner.webp);
+    background-size: cover;
+    background-position: center;
+    color: $off-white;
+    display: flex;
+    background-attachment: fixed;
+    a{
+        color: $off-white;
+        text-decoration: none;
+        transition: 0.2s;
+        text-transform: none;
+        &:hover{
+            color: $accent;
+        }
+    }
+    .contact-container{
+        width: 100%;
+        max-width: 1440px;
+        margin: auto;
+        @include sm{
+            display: flex;
+        }
+        div:first-of-type{
+            @include sm{
+                flex: 1;
+            }
+        }
+        div:last-of-type{
+            // padding-top: 0;
+            @include sm{
+                // padding-top: 2rem;
+                // margin-top: 0;
+            }
+            @include md{
+                flex: 1;
+            }
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            label{
+                display: contents;
+                input, textarea{
+                    padding: 8px;
+                    margin-bottom: 1rem;
+                    margin-top: 5px;
+                    background-color: transparentize($color: $off-white, $amount: 0.9);
+                    border: 1px solid $off-white;
+                    border-radius: 2px;
+                    outline: none;
+                    transition: 0.2s;
+                    color: $off-white;
+                    font-family: "Spatan", Helvetica, sans-serif;
+                    &:focus{
+                        border: 1px solid $accent;
+                    }
+                }
+            }
+            .buttons{
+                input{
+                    &:last-of-type{
+                        margin-left: 1rem;
+                    }
+                }
+            }
+        }
+        h4{
+            margin: 0 0 1rem;
+            &:last-of-type{
+                margin-top: 1rem;
+            }
+            i{
+                margin-right: 2rem;
+            }
+        }
+        .social-icons{
+            ul{
+                list-style-type: none;
+                padding: 0;
+                display: flex;
+                li{
+                    margin: 1.5rem 0.5rem 0 0;
+                    a{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 2.25rem;
+                        height: 2.25rem;
+                        border-radius: 100%;
+                        &:hover{
+                            color: $off-white;
+                            transform: translateY(-0.25rem);
+                        }
+                        &.twitter{
+                            background-color: #70aecd;
+                        }
+                        &.facebook{
+                            background-color: #7490c3;
+                        }
+                        &.instagram{
+                            background-color: #bb61a3;
+                        }
+                        &.linkedin{
+                            background-color: #2d7aa3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

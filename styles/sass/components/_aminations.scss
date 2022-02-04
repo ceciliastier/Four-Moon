@@ -1,0 +1,95 @@
+@keyframes header-reveal {
+    from {
+        transform: translateY(-65px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes lightbox-open {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+@keyframes slide-up {
+    from {
+        transform: translateY(100px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@mixin fade-up {
+    animation-name: fade-in, slide-up;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    // animation-delay: 0.2s;
+}
+
+@mixin fade-in {
+    animation-name: fade-in;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    // animation-delay: 0.2s;
+}
+
+@mixin animation {
+    opacity: 0;
+    transition: 0.2s;
+    &.animate {
+        @include fade-up;
+    }
+}
+
+h3:not(.contact h3) {
+    @include animation;
+}
+
+#about p {
+    @include animation;
+}
+.gallery-container {
+    @include animation;
+}
+
+.gallery-container div {
+    opacity: 0;
+    &.animate {
+        @include fade-in;
+        &:nth-child(even) {
+            animation-duration: 1s;
+        }
+    }
+}
+.testimonials-container figure {
+    @include animation;
+}
+.team-container section {
+    @include animation;
+}
+.locations-container > *:not(h3) {
+    @include animation;
+}

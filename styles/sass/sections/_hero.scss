@@ -1,0 +1,26 @@
+.hero{
+    background: linear-gradient(transparentize(#1b1b1b, 0.35), transparentize(#0f0f0f, 0)), url(/images/banner.webp);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: $off-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-attachment: fixed;
+    .hero-container{
+        animation-name: slide-up, fade-in;
+        animation-duration: 0.8s;
+        animation-timing-function: ease-in-out;
+    }
+    @include sm{
+        height: 75vh;
+    }
+    a{
+        margin: 2rem 0;
+    }
+}
+
+

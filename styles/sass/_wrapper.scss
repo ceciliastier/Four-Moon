@@ -1,0 +1,77 @@
+.wrapper {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    @include sm {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    @include md {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    @include lg {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+}
+main {
+    #about{
+        padding-bottom: 0;
+        p{
+            margin-bottom: 1rem;
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .wrapper {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        max-width: 1440px;
+        margin: auto;
+        @include sm {
+            padding-top: 3em;
+            padding-bottom: 3rem;
+        }
+        @include md {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        @include lg {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+    }
+}
+.contact {
+    .wrapper {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        padding-top: 0;
+        padding-bottom: 0;
+        @include sm {
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            &:first-of-type{
+                padding-right: 1rem;
+            }
+            &:last-of-type{
+                padding-left: 1rem;
+            }
+        }
+        @include md {
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+            &:first-of-type{
+                padding-right: 1.5rem;
+            }
+            &:last-of-type{
+                padding-left: 1.5rem;
+            }
+        }
+        @include lg {
+            margin-top: 6rem;
+            margin-bottom: 6rem;
+        }
+    }
+}

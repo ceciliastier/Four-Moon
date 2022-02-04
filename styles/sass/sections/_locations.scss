@@ -1,0 +1,19 @@
+.locations{
+    background-image: url(/images/map.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    h4{
+        margin: 1rem 0;
+    }
+    ul{
+        column-count: 2;
+        @include sm{
+            column-count: 3;
+        }
+        @include md{
+            column-count: 4;
+        }
+    }
+}
